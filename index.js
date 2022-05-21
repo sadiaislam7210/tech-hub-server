@@ -20,3 +20,9 @@ const client = new MongoClient(uri, {
   serverApi: ServerApiVersion.v1,
 });
 
+
+
+// Create root API
+app.get("/", (req, res) => {
+  res.send("Running Electra server");
+});
