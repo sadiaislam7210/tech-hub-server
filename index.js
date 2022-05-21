@@ -26,3 +26,9 @@ const client = new MongoClient(uri, {
 app.get("/", (req, res) => {
   res.send("Running Electra server");
 });
+
+// For Port & Listening
+const port = process.env.PORT || 8080;
+app.listen(port, (req, res) => {
+  console.log("Listening to port", port);
+});
